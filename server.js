@@ -8,6 +8,7 @@ const { connectToDB } = require("./Connectors/Db")
 const { connectToRedis } = require("./Connectors/redis")
 const { googleOAuth } = require("./Connectors/OAuth")
 
+require("dotenv").config()
 const { corsConfig } = require("./Configs")
 
 /***** Router routes *********/
