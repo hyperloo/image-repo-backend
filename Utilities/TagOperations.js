@@ -83,6 +83,7 @@ function incrementTagByTagId(id) {
  */
 
 async function getTagDetails(tagNames) {
+    if (tagNames && !Array.isArray(tagNames)) tagNames = tagNames.split(",")
     return new Promise(async (resolve) => {
         try {
             const rawTags = await Tag.findAll({

@@ -1,10 +1,10 @@
 const router = require("express").Router()
-const { isAuthenticated } = require("../middlewares/authenticate")
-const { updateUserName } = require("../Utilities/UserOperations")
 const {
-    checkUserInRedis,
-    setUsernameInRedis,
-} = require("../Utilities/redisOperations")
+    isAuthenticated,
+    isAuthenticatedWithNoUsername,
+} = require("../middlewares/authenticate")
+const { updateUserName } = require("../Utilities/UserOperations")
+const { checkUserInRedis } = require("../Utilities/redisOperations")
 
 /**
  * ----------------------------------------------------------------------------
@@ -18,11 +18,11 @@ router.get("/", isAuthenticated, (req, res) => {
  * ----------------------------------------------------------------------------
  * @description Check if username exists
  */
-router.get("/check", async (req, res) => {
+router.get("/check", isAuthenticatedWithNoUsername, async (req, res) => {
     const { username } = req.query
     const [err, data] = await checkUserInRedis(username)
     if (err) return res.send({ status: 409, msg: err })
-    res.send({ status: 200, msg: "username does not exist", data: data })
+    res.send({ status: 200, msg: "Valid Username!", data: data })
 })
 
 /**
@@ -42,7 +42,7 @@ router.patch("/", isAuthenticated, async (req, res) => {
         const [err, data] = await updateUserName(req.user.id, username)
 
         if (err) throw err
-        else {e
+        else {
             let user = data
             if (!user) user = { ...req.user, username }
             req.session.user = user

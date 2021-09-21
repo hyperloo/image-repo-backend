@@ -14,7 +14,7 @@ const Tag = sqlDb.define(
         },
         numberOfImages: {
             type: Sequelize.INTEGER,
-            default: 0,
+            default: 1,
         },
     },
     {

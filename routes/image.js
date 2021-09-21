@@ -76,7 +76,7 @@ router.post("/create/bulk", isAuthenticated, async (req, res) => {
 
     incrementUserByUserId(req.user.id, uploads.length)
 
-    res.send({ status: 200, msg: "Image created successfully!", data })
+    res.send({ status: 200, msg: "Images created successfully!", data })
 })
 
 /**
@@ -96,7 +96,8 @@ router.get("/", checkInCache, async (req, res) => {
     data = images
 
     if (tags && details === "true") {
-        let [tagErr, tagDetails] = await getTagDetails(tags)
+        let splittedTags = tags.split(",")
+        let [tagErr, tagDetails] = await getTagDetails(splittedTags)
         if (tagErr) return res.send({ status: 400, msg: tagErr })
         data = { images, tags: tagDetails }
     }

@@ -10,7 +10,7 @@ const Image = sqlDb.define(
             autoIncrement: true,
         },
         name: {
-            type: Sequelize.STRING(20000),
+            type: Sequelize.STRING(100),
         },
         link: {
             type: Sequelize.STRING(20000),
@@ -20,7 +20,7 @@ const Image = sqlDb.define(
             },
         },
         tagsArray: {
-            type: Sequelize.STRING(100),
+            type: Sequelize.STRING(1000),
         },
         creatorId: {
             type: Sequelize.STRING(40),

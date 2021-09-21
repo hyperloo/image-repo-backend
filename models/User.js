@@ -30,7 +30,7 @@ const User = sqlDb.define(
             },
         },
         language: {
-            type: Sequelize.STRING(2),
+            type: Sequelize.STRING(10),
             defaultValue: "en",
         },
         uploads: {

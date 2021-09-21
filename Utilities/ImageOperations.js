@@ -156,7 +156,10 @@ async function getImages(arg = {}) {
         try {
             let where = {}
             if (id) where.id = id
-            if (name) where.name = name
+            if (name) {
+                if (!Array.isArray(name)) name = name.split(",")
+                where.name = name
+            }
             if (userId) where.creatorId = userId
 
             const rawImage = await Image.findAll({

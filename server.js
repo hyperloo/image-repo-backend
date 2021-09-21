@@ -48,10 +48,6 @@ googleOAuth()
 app.use(passport.initialize())
 app.use(passport.session())
 
-app.get("/", (req, res) => {
-    res.send(req.user)
-})
-
 /**** Route based middlewares *******/
 app.use("/api/user", userRouter)
 app.use("/api/auth", authRouter)
