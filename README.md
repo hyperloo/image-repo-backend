@@ -80,6 +80,12 @@ Tagging is one of the most important feature of the Backend which enables to cat
 
 ## Models
 
+---
+
+<img src="./er-diagram.png" alt="Er Diagram">
+
+---
+
 ### **Users Model**
 
 ```
