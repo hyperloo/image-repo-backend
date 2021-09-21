@@ -56,7 +56,7 @@ Tagging is one of the most important feature of the Backend which enables to cat
 
 ### **Users Model**
 
-```sh
+```
 create table users (
 	id varchar(40) primary key,
     username varchar(20),
@@ -76,7 +76,7 @@ create table users (
 
 ### **Images Model**
 
-```sh
+```
 create table images(
 	id int auto_increment primary key,
     name varchar(100) not null,
@@ -100,7 +100,7 @@ create table images(
 
 ### **Tags Model**
 
-```sh
+```
 create table tags(
 	id int auto_increment primary key,
     name varchar(40) not null,
@@ -115,7 +115,7 @@ create table tags(
 
 ### **TagMappings Model**
 
-```sh
+```
 create table tagMappings(
 	id int primary key auto_increment,
     tagName varchar(40) not null,
@@ -145,25 +145,25 @@ create table tagMappings(
 
 ### `Authentication APIs`
 
-```sh
+```
     API: /auth/login
     Method: Get
     Description: For initializing Google OAuth2.0
 ```
 
-```sh
+```
     API: /auth/google/callback
     Method: Get
     Description: Callback method from the Google OAuth2.0
 ```
 
-```sh
+```
     API: /auth/success
     Method: Get
     Description: Successful Login route which sends back user to frontend
 ```
 
-```sh
+```
     API: /auth/failure
     Method: Get
     Description: On Authentication Failure
@@ -174,7 +174,7 @@ create table tagMappings(
     }
 ```
 
-```sh
+```
     API: /auth/logout
     Method: Get
     Description: User Session Logout
@@ -207,7 +207,7 @@ create table tagMappings(
 
 ### `User APIs`
 
-```sh
+```
     API: /user
     Method: Get
     Description: Get the logged in user
@@ -229,7 +229,7 @@ create table tagMappings(
     }
 ```
 
-```sh
+```
     API: /user/check?username=<typed-username>
     Method: Get
     Description: Check if username is already taken or not
@@ -248,7 +248,7 @@ create table tagMappings(
     }
 ```
 
-```sh
+```
     API: /user/patch?username=<username>
     Method: Patch
     Description: Update the username
@@ -321,7 +321,7 @@ create table tagMappings(
 
 ### `Image APIs`
 
-```sh
+```
     API: /image/create
     Method: Post
     Description: create an Image
@@ -350,7 +350,7 @@ create table tagMappings(
     }
 ```
 
-```sh
+```
     API: /image/create/bulk
     Method: Post
     Description: create bulk Images
@@ -400,7 +400,7 @@ create table tagMappings(
     }
 ```
 
-```sh
+```
     API: /image?tags=image,one&details=true&page=1&limit=2
     Method: Get
     Description: Get all the images with given tag names
@@ -487,7 +487,7 @@ create table tagMappings(
 
 ```
 
-```sh
+```
     API: /image/all?page=1&limit=2
     Method: Get
     Description: Get all the images
@@ -523,7 +523,7 @@ create table tagMappings(
         }
 ```
 
-```sh
+```
     API: /image/all/<user-id>?page=1&limit=2
     Method: Get
     Description: Get all the images for the user
@@ -560,7 +560,7 @@ create table tagMappings(
     }
 ```
 
-```sh
+```
     API: /image/multi?id=24,25 or /image/multi?name=image1,image2
     Method: Get
     Description: Get the images with given ids or image name
@@ -597,7 +597,7 @@ create table tagMappings(
     }
 ```
 
-```sh
+```
     API: /image/single?id=24
     Method: Get
     Description: Get the images view with given id
@@ -609,7 +609,7 @@ create table tagMappings(
     }
 ```
 
-```sh
+```
     API: /image/react
     Method: Patch
     Description: react on the image with given id and like as +1 or -1
@@ -638,7 +638,7 @@ create table tagMappings(
 
 ### `Tag APIs`
 
-```sh
+```
     API: /tag/all?page=1&limit=2
     Method: Get
     Description: Get all the tags
@@ -663,7 +663,7 @@ create table tagMappings(
     }
 ```
 
-```sh
+```
     API: /tag?id=7,12
     Method: Get
     Description: Get the tags with given Ids
@@ -701,7 +701,7 @@ create table tagMappings(
 
 ### `Tag APIs`
 
-```sh
+```
     API: /aws/put-signed-url?uploads=2 (default 1)
     Method: Get
     Description: Get an array of putObject type presigned Urls for given number of uploads
@@ -720,7 +720,7 @@ create table tagMappings(
     }
 ```
 
-```sh
+```
     API: /aws/get-signed-url?key=08550cca-ef7f-467b-b751-88d10415cd5f,a5e62d88-f89c-490c-9139-2b8830cea398
     Method: Get
     Description: Get an array of getObject type presigned Urls with given keys
