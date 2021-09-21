@@ -1,4 +1,6 @@
-# Image_Repo Backend [link](https://shopify-backend-app.herokuapp.com/api/user)
+# Image_Repo Backend
+
+[API Link - https://shopify-backend-app.herokuapp.com/api ](https://shopify-backend-app.herokuapp.com/api) concatenate the below provided api to end
 
 _NodeJS and Express.js Backend_
 <br/>
