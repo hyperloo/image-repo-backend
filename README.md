@@ -728,8 +728,8 @@ create table tagMappings(
         status: 200,
         data: [
                 {
-                ur:pre-signed-url-get-1,
-                ke: "08550cca-ef7f-467b-b751-88d10415cd5f"
+                    url: pre-signed-url-get-1,
+                    key: "08550cca-ef7f-467b-b751-88d10415cd5f"
                 },
                 {
                     url: pre-signed-url-get-2,
