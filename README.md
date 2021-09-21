@@ -4,7 +4,22 @@ _NodeJS and Express.js Backend_
 
 An Image Repository Backend with Google OAuth2.0 for Authentication, Bulk Image Uploading, Secure Access and Much more
 
-### <u>Packages and Libraries used Globally</u>
+### Table of Contents
+
+-   [Packages & Libraries used](#packages-and-libraries-used)
+-   [Features](#features)
+-   [Models](#models)
+    -   [Users Model](#users-model)
+    -   [Images Model](#images-model)
+    -   [Tags Model](#tags-model)
+    -   [TagMappings Model](#tagmappings-model)
+-   [Functional Insights](#functional-insights)
+    -   [User Logging to the App](#user-logging-to-the-app)
+    -   [Image Management](#image-management)
+    -   [Tag Management](#tag-management)
+    -   [Uploads to AWS Management](#uploads-to-aws-management)
+
+## Packages and Libraries used
 
 #### a. For building APIs
 
@@ -131,7 +146,7 @@ create table tagMappings(
 
 ---
 
-## Feature Insights
+## Functional Insights
 
 ## `User Logging to the App`
 
