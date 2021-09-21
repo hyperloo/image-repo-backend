@@ -1,6 +1,15 @@
 # Image_Repo Backend [link](https://shopify-backend-app.herokuapp.com/api/user)
 
 _NodeJS and Express.js Backend_
+<br/>
+
+<p align="center">
+<img src="https://img.shields.io/badge/backend-NodeJS-darkgreen?style=flat&logo=Node.js">
+<img src="https://img.shields.io/badge/framework-ExpressJS-yellowgreen?style=flat">
+<img src="https://img.shields.io/badge/database-MySQL-darkgreen?style=flat&logo=MongoDB">
+<img src="https://img.shields.io/badge/Authentication-GoogleOAuth2.0-orange?style=flat&logo=json-web-tokens">
+</p>
+<br/>
 
 An Image Repository Backend with Google OAuth2.0 for Authentication, Bulk Image Uploading, Secure Access and Much more
 
