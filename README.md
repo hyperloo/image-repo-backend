@@ -295,9 +295,8 @@ create table tagMappings(
 >     -   User can upload Images, Bulk Images or image links.
 >     -   Image Creation can be done only if user is logged in.
 >     -   <u>Naming</u>: <br>
-
-            - User can give `name to image` or `random name` is assigned to image with prefix as `Image_`. <br>
-            - In case of Bulk images, a bulk image prefix f given, if any image do not have a name, then that prefix is used along with random string
+>         -   User can give `name to image` or `random name` is assigned to image with prefix as `Image_`. <br>
+>         -   In case of Bulk images, a bulk image prefix f given, if any image do not have a name, then that prefix is used along with random string
 
 > -   **Pagination**
 >     -   Every Image API have pagination enabled using `page` & `limit`.
